@@ -1,0 +1,32 @@
+<h1>Add your very own kitty cat!</h1>
+
+<div class="big-circle">
+  <img src="<%= @photo %>">
+</div>
+
+<div class="col-md-12">
+<div class="col-md-offset-4 col-md-4">
+<%= form_for :cat, :class => "input-group", url: cat_path do |f| %>
+
+<% if @cat.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@cat.errors.count, "error") %> prohibited
+        this cat from being saved:
+      </h2>
+      <ul>
+        <% @cat.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :name, :class => "form-control", :placeholder => "Enter Name" %>
+  <%= f.text_field :desc, :class => "form-control", :placeholder => "Enter Description" %>
+  <%= f.hidden_field :img, :class => "form-control", :value => @photo %>
+  <%= f.submit :class=>'btn btn-primary' %>
+<% end %>
+
+</div>
+</div>

@@ -1,0 +1,7 @@
+<h2>This is <%= @cat.name %>!</h2>
+  <div class="big-circle">
+    <img src="<%= @cat.img %>">
+  </div>
+<h3><%= @cat.name %> <%= @cat.desc %></h3>
+
+<a class="btn btn-default" href="/cats/<%= @cat.id %>/edit" role="button">Edit</a>
