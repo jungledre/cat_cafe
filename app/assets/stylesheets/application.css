@@ -1,0 +1,76 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+* {
+  font-family: 'The Girl Next Door', cursive;
+}
+
+body {
+  background-image: url('../assets/pusheen-tiled.png');
+  text-align: center;
+}
+
+.cats {
+  padding-bottom: 20px;
+}
+
+.container {
+  background-color: rgba(252, 240, 228, .9);
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+div.cat.col-md-3 {
+  margin: 0 auto;
+}
+
+.small-circle {
+  height:200px;
+  width:200px;
+  overflow:hidden;
+  border-radius:50%;
+  margin: auto;
+}
+
+.small-circle img{
+  -webkit-transform:translate(-50%);
+  margin-left: 50%;
+  height:100%;
+}
+
+.big-circle {
+  height:500px;
+  width:500px;
+  overflow:hidden;
+  border-radius:50%;
+  margin: auto;
+}
+
+.big-circle img{
+  -webkit-transform:translate(-50%);
+  margin-left: 50%;
+  height:100%;
+}
+
+.welcome-title {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  padding-bottom: 0px;
+  font-size: 50px;
+}
+
