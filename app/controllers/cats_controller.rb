@@ -1,11 +1,14 @@
 class CatsController < ApplicationController
 
+  before_action :locate_cat, only: [:show, :update, :destroy, :edit]
+
   def index
     @cats = Cat.all
   end
 
   def show
     @cat = Cat.find(params[:id])
+    not_found unless @cat
   end
 
   def new
@@ -52,7 +55,12 @@ class CatsController < ApplicationController
   end
 
   private
+
   def cat_params
     params.require(:cat).permit(:name, :desc, :img)
+  end
+
+  def locate_cat
+    redirect_to '/404.html' unless @cat = Cat.find_by_id(params[:id])
   end
 end

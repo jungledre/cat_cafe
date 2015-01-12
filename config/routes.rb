@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   get 'results' => 'cats#new'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-  match '/404', to: 'public#404', via: :all
-  match '/422', to: 'public#422', via: :all
-  match '/500', to: 'public#500', via: :all
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :cats
+
+  get '*path' => redirect('/404.html')
   # Example resource route with options:
   #   resources :products do
   #     member do

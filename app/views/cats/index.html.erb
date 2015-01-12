@@ -4,16 +4,18 @@
 
 <div class="col-md-12">
 <h3>Meet a new kitty:<h3>
-<%= form_tag results_path, :method => "get" do %>
-  <%= text_field_tag :search, nil, :placeholder => "ex. Cornish Rex" %>
-  <%= submit_tag "search", :name => nil %>
-<% end %>
+<div class="col-md-offset-4 col-md-4"
+  <%= form_tag results_path, :class=> "navbar-form navbar-left col-md-offset-4 col-md-4", :method => "get" do %>
+    <%= text_field_tag :search, nil, :class=> "form-control", :placeholder => "ex. Cornish Rex" %>
+    <%= submit_tag "search", :class=>'btn btn-default', :name => nil %>
+  <% end %>
+</div>
 
 <div class="cats col-md-12">
 <% @cats.each do |c| %>
       <div class="cat col-md-3">
         <div class="small-circle">
-          <a href="/cats/<%= c.id %>"><img src="<%= c.img %>"></a>
+          <a href="/cats/<%= c.id %>"><img src="<%= c.img.gsub("_b", "_m") %>"></a>
         </div>
         <h2><%= c.name %></h2>
       </div>

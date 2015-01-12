@@ -17,12 +17,11 @@
       <a class="navbar-brand" href="/cats">Cat Cafe</a>
     </div>
       <ul class="nav navbar-nav">
-      <li>Meet a new kitty:</li>
-      <li><%= form_tag results_path, :method => "get" do %>
-        <%= text_field_tag :search, nil, :placeholder => "ex. Cornish Rex" %>
-        <%= submit_tag "search", :name => nil %>
-      <% end %></li>
-
+      <p class="navbar-text">Meet a new kitty:</p>
+        <%= form_tag results_path, :class=> "navbar-form navbar-left", :method => "get" do %>
+          <%= text_field_tag :search, nil, :class=> "form-control", :placeholder => "ex. Cornish Rex" %>
+          <%= submit_tag "search", :class=>'btn btn-default', :name => nil %>
+        <% end %>
       </ul>
   </div>
 </nav>
