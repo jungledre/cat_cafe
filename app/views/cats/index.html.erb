@@ -12,10 +12,10 @@
 <div class="cats col-md-12">
 <% @cats.each do |c| %>
       <div class="cat col-md-3">
-        <h2><%= c.name %></h2>
         <div class="small-circle">
           <a href="/cats/<%= c.id %>"><img src="<%= c.img %>"></a>
         </div>
+        <h2><%= c.name %></h2>
       </div>
 <% end %>
 </div>

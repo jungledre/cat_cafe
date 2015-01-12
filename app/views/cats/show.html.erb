@@ -4,4 +4,9 @@
   </div>
 <h3><%= @cat.name %> <%= @cat.desc %></h3>
 
-<a class="btn btn-default" href="/cats/<%= @cat.id %>/edit" role="button">Edit</a>
+<%= link_to 'Edit',  edit_cat_path(@cat),
+              class: 'btn btn-default' %>
+<%= link_to 'Destroy', cat_path(@cat),
+              method: :delete,
+              data: { confirm: 'Are you sure you want to destroy this cat?' },
+              class: 'btn btn-default' %>
