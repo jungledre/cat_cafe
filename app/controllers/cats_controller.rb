@@ -32,6 +32,7 @@ class CatsController < ApplicationController
     @cat = Cat.new(cat_params)
 
     if @cat.save
+      flash[:notice] = "Your cat has joined the cafe!"
       redirect_to @cat
     else
       render 'new'
@@ -49,9 +50,10 @@ class CatsController < ApplicationController
 
   def destroy
     @cat = Cat.find(params[:id])
-    @cat.destroy
-
-    redirect_to cats_path
+    if @cat.destroy
+      flash[:notice] = "We have destroyed your cat successfully"
+      redirect_to cats_path
+    end
   end
 
   private

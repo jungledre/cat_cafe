@@ -1,4 +1,11 @@
 <h2>This is <%= @cat.name %>!</h2>
+
+<% if flash.any? %>
+  <% flash.each do |key, message| %>
+    <div class="alert alert-<%= key %>"><%= message %></div>
+  <% end %>
+<% end %>
+
   <div class="big-circle">
     <img src="<%= @cat.img %>">
   </div>

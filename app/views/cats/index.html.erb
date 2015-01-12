@@ -1,16 +1,14 @@
 <div class="col-md-12">
-<h1 class="welcome-title col-md-offset-3 col-md-6">Welcome to Cat Cafe!</h1>
+  <h1 class="welcome-title col-md-offset-3 col-md-6">Welcome to Cat Cafe!</h1>
 </div>
 
 <div class="col-md-12">
-<h3>Meet a new kitty:<h3>
-<div class="col-md-offset-4 col-md-4"
-  <%= form_tag results_path, :class=> "navbar-form navbar-left col-md-offset-4 col-md-4", :method => "get" do %>
-    <%= text_field_tag :search, nil, :class=> "form-control", :placeholder => "ex. Cornish Rex" %>
-    <%= submit_tag "search", :class=>'btn btn-default', :name => nil %>
+<% if flash.any? %>
+  <% flash.each do |key, message| %>
+    <div class="alert alert-<%= key %>"><%= message %></div>
   <% end %>
+<% end %>
 </div>
-
 <div class="cats col-md-12">
 <% @cats.each do |c| %>
       <div class="cat col-md-3">

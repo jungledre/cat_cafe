@@ -23,6 +23,9 @@ body {
   text-align: center;
 }
 
+div.cats.col-md-12 h2 {
+  margin-top: 10px;
+}
 .cats {
   padding-bottom: 20px;
 }
@@ -64,15 +67,19 @@ div.cat.col-md-3 {
 .big-circle img{
   -webkit-transform:translate(-50%);
   margin-left: 50%;
+  max-height: 120%;
   min-height:100%;
   min-width:100%;
 }
 
 .welcome-title {
-  background-color: white;
+  background-color: #918478;
+  color: white;
   border-radius: 15px;
-  padding: 20px;
-  padding-bottom: 0px;
+  border: 5px solid #FAB8BE;
+  padding: 25px;
+  padding-bottom: 10px;
   font-size: 50px;
+  margin-bottom: 50px;
 }
 
