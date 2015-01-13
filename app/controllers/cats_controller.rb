@@ -1,9 +1,10 @@
 class CatsController < ApplicationController
 
-  before_action :locate_cat, only: [:show, :update, :destroy, :edit]
+  before_action :is_authenticated?, :locate_cat, only: [:show, :update, :destroy, :edit]
 
   def index
     @cats = Cat.all
+    @user = current_user
   end
 
   def show

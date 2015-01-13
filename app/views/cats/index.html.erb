@@ -9,9 +9,10 @@
   <% end %>
 <% end %>
 </div>
+
 <div class="cats col-md-12">
 <% @cats.each do |c| %>
-      <div class="cat col-md-3">
+      <div class="cat col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="small-circle">
           <a href="/cats/<%= c.id %>"><img src="<%= c.img.gsub("_b", "_m") %>"></a>
         </div>
