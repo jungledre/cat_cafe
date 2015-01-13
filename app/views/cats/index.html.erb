@@ -1,11 +1,11 @@
 <div class="col-md-12">
-  <h1 class="welcome-title col-md-offset-3 col-md-6">Welcome to Cat Cafe!</h1>
+  <h1 class="welcome-title col-md-offset-3 col-md-6">Welcome to<br>CAT CAFE!</h1>
 </div>
 
 <div class="col-md-12">
 <% if flash.any? %>
   <% flash.each do |key, message| %>
-    <div class="alert alert-<%= key %>"><%= message %></div>
+    <div class="alert alert-<%= key %>" role="<%= key %>"><%= message %></div>
   <% end %>
 <% end %>
 </div>

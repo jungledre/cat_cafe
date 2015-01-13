@@ -15,7 +15,7 @@
 */
 
 * {
-  font-family: 'The Girl Next Door', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 body {
@@ -47,6 +47,7 @@ div.cat.col-md-3 {
   overflow:hidden;
   border-radius:50%;
   margin: auto;
+  border: 5px solid #FAB8BE;
 }
 
 .small-circle img{
@@ -62,6 +63,7 @@ div.cat.col-md-3 {
   overflow:hidden;
   border-radius:50%;
   margin: auto;
+
 }
 
 .big-circle img{
@@ -77,8 +79,7 @@ div.cat.col-md-3 {
   color: white;
   border-radius: 15px;
   border: 5px solid #FAB8BE;
-  padding: 25px;
-  padding-bottom: 10px;
+  padding: 10px;
   font-size: 50px;
   margin-bottom: 50px;
 }
