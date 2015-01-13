@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   #   resources :products
   resources :cats
 
-  get '*path' => redirect('/404.html')
+  # get '*path' => redirect('/404.html')
+
   # Example resource route with options:
   #   resources :products do
   #     member do
