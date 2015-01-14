@@ -11,6 +11,9 @@
   </div>
 <h3><%= @cat.name %> <%= @cat.desc %></h3>
 
+<% @cat.tags.each do |tag| %>
+<%= link_to tag.name, tag_path(tag.name) %>
+<% end %>
 
 <%= link_to 'Edit',  edit_cat_path(@cat),
               class: 'btn btn-default' %>

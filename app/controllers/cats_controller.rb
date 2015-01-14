@@ -9,7 +9,10 @@ class CatsController < ApplicationController
   end
 
   def show
-    @tags = Tag.all
+    @cat = Cat.find_by_id(params[:id])
+    @tags = @cat.tags.map do |tag|
+              tag.name
+            end
   end
 
   def new
@@ -51,10 +54,13 @@ class CatsController < ApplicationController
 
   def update
     @cat.tags.clear
+
     tags = params[:cat][:tag_ids]
     tags.each do |tag_id|
       @cat.tags << Tag.find(tag_id) unless tag_id.blank?
     end
+
+
 
     if @cat.update(cat_params)
       redirect_to @cat
@@ -68,6 +74,11 @@ class CatsController < ApplicationController
       flash[:notice] = "We have destroyed your cat successfully"
       redirect_to cats_path
     end
+  end
+
+  def tag
+    tag = Tag.find_by_name(params[:tag])
+    @cats = tag ? tag.cats : []
   end
 
   private
