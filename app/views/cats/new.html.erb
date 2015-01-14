@@ -6,7 +6,9 @@
 
 <div class="col-md-12">
 <div class="col-md-offset-4 col-md-4">
-<%= form_for :cat, :class => "input-group", url: cats_path do |f| %>
+
+
+<%= bootstrap_form_for @cat do |f| %>
 
 <% if @cat.errors.any? %>
     <div id="error_explanation">
@@ -27,10 +29,8 @@
   <%= f.text_field :desc, :class => "form-control", :placeholder => "Enter Description" %>
   <%= f.hidden_field :img, :class => "form-control", :value => @photo %>
 
-  <% @tags.each do |tag| %>
-    <%= f.check_box :tags, :value => tag.id %>
-    <%= tag.name %>
-  <% end %>
+<%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
+
 
   <%= f.submit :class=>'btn btn-default' %>
 <% end %>

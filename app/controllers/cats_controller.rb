@@ -60,8 +60,6 @@ class CatsController < ApplicationController
       @cat.tags << Tag.find(tag_id) unless tag_id.blank?
     end
 
-
-
     if @cat.update(cat_params)
       redirect_to @cat
     else
@@ -84,7 +82,7 @@ class CatsController < ApplicationController
   private
 
   def cat_params
-    params.require(:cat).permit(:name, :desc, :img, :tag_ids, :creature_ids, :tags)
+    params.require(:cat).permit(:name, :desc, :img, :tag_ids, :cat_ids, :tags)
   end
 
   def locate_cat
