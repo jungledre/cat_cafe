@@ -9,10 +9,12 @@ class CatsController < ApplicationController
   end
 
   def show
+    @tags = Tag.all
   end
 
   def new
     @cat = Cat.new
+    @tags = Tag.all
 
     @search = params[:search]
     list = flickr.photos.search :text => @search, :sort => "relevance"
@@ -25,12 +27,21 @@ class CatsController < ApplicationController
   end
 
   def edit
+    @tags = Tag.all
   end
 
   def create
     @cat = Cat.new(cat_params)
+    @tags = Tag.all
 
     if @cat.save
+      @cat.tags.clear
+      tags = params[:cat][:tag_ids]
+
+      tags.each do |tag_id|
+        @cat.tags << Tag.find(tag_id) unless tag_id.blank?
+      end
+
       flash[:notice] = "Your cat has joined the cafe!"
       redirect_to @cat
     else
@@ -39,6 +50,12 @@ class CatsController < ApplicationController
   end
 
   def update
+    @cat.tags.clear
+    tags = params[:cat][:tag_ids]
+    tags.each do |tag_id|
+      @cat.tags << Tag.find(tag_id) unless tag_id.blank?
+    end
+
     if @cat.update(cat_params)
       redirect_to @cat
     else
@@ -56,7 +73,7 @@ class CatsController < ApplicationController
   private
 
   def cat_params
-    params.require(:cat).permit(:name, :desc, :img)
+    params.require(:cat).permit(:name, :desc, :img, :tag_ids, :creature_ids, :tags)
   end
 
   def locate_cat

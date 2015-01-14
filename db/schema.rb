@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150112215247) do
+ActiveRecord::Schema.define(version: 20150114191408) do
 
   create_table "cats", force: true do |t|
     t.string   "name"
@@ -19,6 +19,22 @@ ActiveRecord::Schema.define(version: 20150112215247) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "img"
+  end
+
+  create_table "cats_tags", force: true do |t|
+    t.integer  "cat_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cats_tags", ["cat_id"], name: "index_cats_tags_on_cat_id"
+  add_index "cats_tags", ["tag_id"], name: "index_cats_tags_on_tag_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

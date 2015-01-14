@@ -39,6 +39,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'bootstrap_form'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
