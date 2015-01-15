@@ -34,7 +34,7 @@ class TagsController < ApplicationController
       @tag.destroy
       flash[:notice] = "We have destroyed your tag successfully"
     else
-      flash[:notice] = "We were unable to destroy your link! "
+      flash[:notice] = "We were unable to destroy your link! There is a cat attached to this tag."
     end
     redirect_to tags_path
   end

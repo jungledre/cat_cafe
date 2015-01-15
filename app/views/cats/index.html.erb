@@ -2,13 +2,10 @@
   <h1 class="welcome-title col-md-offset-3 col-md-6">Welcome to<br>CAT CAFE!</h1>
 </div>
 
-<div class="col-md-12">
+<div class="cats col-md-12">
 
 <%= render partial: "partials/flash" %>
 
-</div>
-
-<div class="cats col-md-12">
 <% @cats.each do |c| %>
       <div class="cat col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <div class="small-circle">

@@ -6,7 +6,7 @@
         </div>
         <h2><%= c.name %></h2>
         <%  c.tags.each do |tag| %>
-          <%= link_to tag.name, cattag_path(tag.name) %><br>
+          <%= link_to tag.name, cattag_path(tag.name), :class => 'btn btn-default btn-xs' %>
         <% end %>
       </div>
 <% end %>

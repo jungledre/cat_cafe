@@ -19,7 +19,7 @@ class CatsController < ApplicationController
     @cat = Cat.new
     @tags = Tag.all
 
-    @search = params[:search]
+    @search = params[:search]+"cat"
     list = flickr.photos.search :text => @search, :sort => "relevance"
 
     @results = list.map do |photo|

@@ -4,10 +4,10 @@
 <div class="tags col-md-12">
 <% @tags.each do |tag| %>
       <div class="tag col-xs-12 col-sm-6 col-md-3 col-lg-3">
-          <%= link_to tag.name, cattag_path(tag.name) %>
+          <%= link_to tag.name, cattag_path(tag.name), :class => 'btn btn-default' %>
           <%= link_to 'X', tag,
-              method: :delete
-              # data: { confirm: 'Are you sure you want to destroy this tag?' },
+              method: :delete,
+              data: { confirm: 'Are you sure you want to destroy this tag?' }
               %>
       </div>
 <% end %>
