@@ -29,6 +29,8 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
+    bootstrap-tagsinput-rails (0.4.2.1)
+      railties (>= 3.1)
     bootstrap_form (2.2.0)
     builder (3.2.2)
     coderay (1.1.0)
@@ -129,6 +131,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bootstrap-tagsinput-rails
   bootstrap_form
   coffee-rails (~> 4.0.0)
   flickraw

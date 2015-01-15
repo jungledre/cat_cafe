@@ -17,8 +17,8 @@
     </div>
   <% end %>
 
-<%= f.text_field :name, :placeholder => "cat Title", hide_label: :true%>
-<%= f.text_field :desc, :placeholder => "cat Description", hide_label: :true%>
+<%= f.text_field :name, :placeholder => "cat Title", hide_label: :true %>
+<%= f.text_field :desc, :placeholder => "cat Description", hide_label: :true %>
 
 <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
 

@@ -1,10 +1,6 @@
 <h2>This is <%= @cat.name %>!</h2>
 
-<% if flash.any? %>
-  <% flash.each do |key, message| %>
-    <div class="alert alert-<%= key %>"><%= message %></div>
-  <% end %>
-<% end %>
+<%= render partial: "partials/flash" %>
 
   <div class="big-circle">
     <img src="<%= @cat.img %>">
@@ -12,7 +8,7 @@
 <h3><%= @cat.name %> <%= @cat.desc %></h3>
 
 <% @cat.tags.each do |tag| %>
-<%= link_to tag.name, tag_path(tag.name) %>
+<%= link_to tag.name, cattag_path(tag.name) %>
 <% end %>
 
 <%= link_to 'Edit',  edit_cat_path(@cat),

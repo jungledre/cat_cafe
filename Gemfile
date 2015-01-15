@@ -41,6 +41,8 @@ end
 
 gem 'bootstrap_form'
 
+gem 'bootstrap-tagsinput-rails'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

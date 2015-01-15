@@ -25,9 +25,9 @@
   <% end %>
 <a href="javascript:history.go(0)" class="btn btn-default">gimme a new cat</a>
 
-  <%= f.text_field :name, :class => "form-control", :placeholder => "Enter Name" %>
-  <%= f.text_field :desc, :class => "form-control", :placeholder => "Enter Description" %>
-  <%= f.hidden_field :img, :class => "form-control", :value => @photo %>
+  <%= f.text_field :name, :placeholder => "Enter Name", hide_label: :true %>
+  <%= f.text_field :desc, :placeholder => "Enter Description", hide_label: :true %>
+  <%= f.hidden_field :img, :value => @photo %>
 
 <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
 

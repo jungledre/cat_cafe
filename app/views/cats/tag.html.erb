@@ -6,9 +6,8 @@
         </div>
         <h2><%= c.name %></h2>
         <%  c.tags.each do |tag| %>
-          <%= link_to tag.name, tag_path(tag.name) %><br>
+          <%= link_to tag.name, cattag_path(tag.name) %><br>
         <% end %>
       </div>
 <% end %>
 </div>
-

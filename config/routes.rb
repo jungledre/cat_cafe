@@ -14,13 +14,16 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
   post 'logout' => 'sessions#destroy'
 
-  get 'cats/tag/:tag' => 'cats#tag', as: :tag
+  get 'cats/tag/:tag' => 'cats#tag', as: :cattag
+
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :cats
+  resources :tags
 
   # get '*path' => redirect('/404.html')
 
