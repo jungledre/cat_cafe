@@ -43,6 +43,8 @@ gem 'bootstrap_form'
 
 gem 'bootstrap-tagsinput-rails'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

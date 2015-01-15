@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/stripe/stripe-ruby
+  revision: 7087e38bb96d79ce35728bc1cce958edd4d939eb
+  specs:
+    stripe (1.17.3)
+      json (~> 1.8.1)
+      mime-types (>= 1.25, < 3.0)
+      rest-client (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,6 +68,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.5.1)
     multi_json (1.10.1)
+    netrc (0.10.2)
     pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -94,6 +104,9 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -146,5 +159,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   sqlite3
+  stripe!
   turbolinks
   uglifier (>= 1.3.0)

@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   #   resources :products
   resources :cats
   resources :tags
+  resources :charges
 
   # get '*path' => redirect('/404.html')
 
