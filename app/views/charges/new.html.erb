@@ -1,12 +1,28 @@
+<div class="col-md-offset-3 col-md-6">
+
+<h1>Your barista today: Adrienne!</h1>
+
+<h4>She is working at the Cat Cafe while studying web development.</h4>
+
+<div style="background-color: pink;">
 <%= form_tag charges_path do %>
   <article>
     <label class="amount">
-      <span>Amount: $5.00</span>
+      <span>Amount: $3.50</span>
     </label>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
+          data-description="Purrchase a Coffee"
           data-amount="500"></script>
 <% end %>
+</div>
+
+</h5>(All proceeds are funding Adrienne's 12-week Web Development Immersive Course through General
+Assembly. All you are buying is access to a page with an image of a coffee on it.)<h5>
+
+<h3>Thanks for your support!</h3>
+
+</div>
+
