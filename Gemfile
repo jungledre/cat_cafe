@@ -45,6 +45,10 @@ gem 'bootstrap-tagsinput-rails'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+gem 'lolcat', '~> 42.1.0'
+
+gem 'lolspeak', '~> 1.0.0'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

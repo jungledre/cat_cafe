@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'results' => 'cats#new'
 
+  get 'signup' => 'users#new'
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
   resources :cats
   resources :tags
   resources :charges
+  resources :users
 
   # get '*path' => redirect('/404.html')
 

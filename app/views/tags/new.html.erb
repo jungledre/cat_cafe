@@ -1,3 +1,5 @@
+<%= render partial: "partials/flash" %>
+
 <%= bootstrap_form_for @tag do |f| %>
   <%= f.text_field :name, :placeholder => "Enter tag name" %>
   <%= f.submit :class=>'btn btn-default' %>

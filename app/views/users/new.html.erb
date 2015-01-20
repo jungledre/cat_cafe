@@ -1,0 +1,17 @@
+<h1>New user signup</h1>
+
+<% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |error| %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% end %>
+<% end %>
+
+<div class="col-md-offset-4 col-md-4">
+<%= form_for @user do |f| %>
+  <%= f.text_field :email, :class=> "form-control", placeholder: "Enter your email" %>
+  <%= f.text_field :password, :class=> "form-control", placeholder: "Enter your password" %>
+  <%= f.text_field :password_confirmation, :class=> "form-control", placeholder: "Enter your password again.." %>
+
+  <%= f.submit 'signup', :class=>'btn btn-default'%>
+<% end %>
+</div>
