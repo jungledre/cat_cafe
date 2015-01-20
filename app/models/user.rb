@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
               uniqueness: { case_sensitive: false },
               length: {
                 minimum: 4,
-                maximum: 20
+                maximum: 30
               }
 
   validates_confirmation_of :password, on: :create

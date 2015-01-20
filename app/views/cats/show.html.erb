@@ -5,7 +5,7 @@
   <div class="big-circle">
     <img src="<%= @cat.img %>">
   </div>
-<h3><%= @cat.name %> <%= @cat.desc %></h3>
+<h3><%= @cat.name %> <%= @cat.desc.to_lolspeak %></h3>
 
 <% @cat.tags.each do |tag| %>
 <%= link_to tag.name, cattag_path(tag.name), :class=>'btn btn-default btn-xs' %>

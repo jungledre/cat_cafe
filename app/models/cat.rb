@@ -14,7 +14,5 @@ class Cat < ActiveRecord::Base
         presence: true,
         length: { minimum: 5,
                   maximum: 255,
-                  message: "Please enter a description."},
-        format: {    with: /\A[a-zA-Z\d\s'"&*]+\z/,
-                  message: "Please enter only letters"}
+                  message: "Please enter a description."}
 end
