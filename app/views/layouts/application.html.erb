@@ -23,13 +23,19 @@
           <%= text_field_tag :search, nil, :class=> "form-control", :placeholder => "ex. Cornish Rex" %>
           <%= submit_tag "search", :class=>'btn btn-default', :name => nil %>
         <% end %>
-        <a class="navbar-text" href="/signup">Signup</a>
-        <a class="navbar-text" href="/login">Login</a>
-        <a class="navbar-text" href="/logout">Logout</a>
+
         <a class="navbar-text" href="/tags">Tag</a>
         <a class="navbar-text" href="/tags/new">New Tag</a>
         <a class="navbar-text" href="http://quintus-cats.bitballoon.com/">Play a Game!!</a>
         <a class="navbar-text" href="/charges/new">Buy a Virtual Coffee!!</a>
+        <% if @user  %>
+        <a class="navbar-text" href="/logout">Logout</a>
+        <% else %>
+        <a class="navbar-text" href="/signup">Signup</a>
+        <a class="navbar-text" href="/login">Login</a>
+        <% end %>
+
+
         <p class="navbar-text">Hello <%= @greeting %>!</p>
       </ul>
   </div>
