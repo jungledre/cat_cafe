@@ -1,7 +1,7 @@
 $(function(){
   $("#speak").mouseenter(function(){
     $("<audio></audio>").attr({
-      'src':'meow.mp3',
+      'src':'/meow.mp3',
       'volume':0.4,
       'autoplay':'autoplay'
     }).appendTo("body");
