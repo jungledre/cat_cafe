@@ -1,5 +1,5 @@
-FlickRaw.api_key=ENV["FLICKR_KEY"]
-FlickRaw.shared_secret=ENV["FLICKR_SECRET"]
+FlickRaw.api_key=ENV["Flickr_key"]
+FlickRaw.shared_secret=ENV["Flickr_secret"]
 
 # require 'rest-client'
 
