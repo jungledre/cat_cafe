@@ -49,6 +49,10 @@ gem 'lolcat', '~> 42.1.0'
 
 gem 'lolspeak', '~> 1.0.0'
 
+gem 'sweet-alert'
+
+gem 'foursquare2'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

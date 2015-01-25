@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :cats
   resources :tags
   resources :charges
+  get 'buyavirtualcoffeefromadriennerightmeow' => 'charges#new'
   resources :users
 
   # get '*path' => redirect('/404.html')
