@@ -28,7 +28,6 @@
   <%= f.hidden_field :img, :value => @photo %>
 
 <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
-
   <%= f.submit :class=>'btn btn-default' %>
 <% end %>
 

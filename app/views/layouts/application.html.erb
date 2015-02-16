@@ -19,22 +19,12 @@
     </div>
       <ul class="nav navbar-nav">
       <p class="navbar-text">Hello <%= @greeting %>!</p>
-      <p class="navbar-text">Meet a new kitty:</p>
+      <li><%= link_to 'Buy Coffee', buyavirtualcoffeefromadriennerightmeow_path %></li>
+      <li><%= link_to 'Play Game', "http://quintus-cats.bitballoon.com/" %></li>
+      <p class="navbar-text">Meet a New Kitty:</p>
         <%= form_tag results_path, :class=> "navbar-form navbar-left", :method => "get" do %>
           <%= text_field_tag :search, nil, :class=> "form-control", :placeholder => "ex. Cornish Rex" %>
           <%= submit_tag "search", :class=>'btn btn-default', :name => nil %>
-        <% end %>
-<!--         <a class="navbar-text" href="/tags">Tag</a>
-        <a class="navbar-text" href="/tags/new">New Tag</a>
-  --></ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Buy Coffee', buyavirtualcoffeefromadriennerightmeow_path %></li>
-        <li><%= link_to 'Play Game', "http://quintus-cats.bitballoon.com/" %></li>
-        <% if @user  %>
-        <li><%= link_to 'Logout', logout_path %></li>
-        <% else %>
-        <li><%= link_to 'Signup', signup_path %></li>
-        <li><%= link_to 'Login', login_path %></li>
         <% end %>
       </ul>
   </div>
