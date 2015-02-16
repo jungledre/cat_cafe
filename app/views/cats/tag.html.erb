@@ -1,3 +1,15 @@
+<div class="row">
+  <h2>Create a New Tag</h2>
+  <div class="col-md-offset-5 col-md-2">
+  <%= bootstrap_form_for @tag do |f| %>
+    <%= f.text_field :name, hide_label: :true , placeholder: "Enter tag name" %>
+    <%= f.submit "submit", class: "btn btn-default" %>
+  <% end %>
+  <br>
+  </div>
+</div>
+
+<div class="row">
 <div class="cats col-md-12">
 <% @cats.each do |c| %>
       <div class="cat-tags col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -6,8 +18,10 @@
         </div>
         <h2><%= c.name %></h2>
         <%  c.tags.each do |tag| %>
-          <%= link_to tag.name, cattag_path(tag.name), :class => 'btn btn-default btn-xs' %>
+          <%= link_to tag.name, cattag_path(tag.name), class: "btn btn-default btn-xs" %>
         <% end %>
       </div>
 <% end %>
+</div>
+
 </div>

@@ -25,7 +25,6 @@ class CatsController < ApplicationController
     @results = list.map do |photo|
       FlickRaw.url_b(photo)
     end
-
     @photo = @results.sample
   end
 
@@ -77,6 +76,9 @@ class CatsController < ApplicationController
   def tag
     tag = Tag.find_by_name(params[:tag])
     @cats = tag ? tag.cats : []
+
+    @tag = Tag.new
+    @tags = Tag.all
   end
 
   private
